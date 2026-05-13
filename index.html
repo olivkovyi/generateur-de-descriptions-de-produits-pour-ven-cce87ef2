@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants) | Générez vos Descriptions Persuasives</title>
+    <meta name="description" content="Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.">
+    <style>
+        :root {
+            --color-primary: #1a1a1a;
+            --color-secondary: #f0f0f0;
+            --color-accent: #b80d6f;
+            --color-text: #333;
+            --color-light-text: #666;
+            --color-border: #ddd;
+            --font-family-sans: 'Helvetica Neue', Arial, sans-serif;
+            --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            --spacing-unit: 1rem;
+        }
+
+        body {
+            font-family: var(--font-family-sans);
+            color: var(--color-text);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #ffffff 100%);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: calc(2 * var(--spacing-unit)) var(--spacing-unit);
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: -0.05em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: calc(3 * var(--spacing-unit)) auto;
+            padding: 0 calc(1.5 * var(--spacing-unit));
+            display: flex;
+            flex-wrap: wrap;
+            gap: calc(2 * var(--spacing-unit));
+            flex-grow: 1;
+        }
+
+        .tool-section, .info-section {
+            background-color: #fff;
+            padding: calc(2 * var(--spacing-unit));
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-section {
+            flex: 2 1 600px;
+            min-width: 50%;
+            position: relative;
+        }
+
+        .info-section {
+            flex: 1 1 300px;
+            min-width: 30%;
+            background: var(--color-secondary);
+            border-color: #d0d0d0;
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-light-text);
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: var(--font-family-sans);
+            box-sizing: border-box;
+            background-color: #fcfcfc;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--color-accent);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(184, 13, 111, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: var(--color-accent);
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+            box-shadow: 0 4px 12px rgba(184, 13, 111, 0.3);
+            width: fit-content;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #a00c60;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(184, 13, 111, 0.2);
+        }
+
+        #tool-result {
+            margin-top: calc(2 * var(--spacing-unit));
+            padding-top: calc(1.5 * var(--spacing-unit));
+            border-top: 1px dashed var(--color-border);
+            font-size: 0.95rem;
+        }
+
+        #tool-result h3 {
+            color: var(--color-accent);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .result-group {
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .result-group h4 {
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .result-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .result-group li {
+            background-color: #fff;
+            padding: 0.7rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #f0f0f0;
+            font-family: var(--font-family-mono);
+            font-size: 0.9rem;
+            color: var(--color-text);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            word-break: break-word;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-section li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--color-light-text);
+        }
+
+        .info-section li::before {
+            content: '✓';
+            color: var(--color-accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            text-align: center;
+            padding: calc(3 * var(--spacing-unit)) var(--spacing-unit);
+            margin-top: calc(4 * var(--spacing-unit));
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .seo-section {
+            background-color: #fdfdfd;
+            padding: calc(3 * var(--spacing-unit)) calc(1.5 * var(--spacing-unit));
+            margin-top: calc(4 * var(--spacing-unit));
+            border-top: 1px solid var(--color-border);
+            color: var(--color-light-text);
+        }
+
+        .seo-section h3 {
+            color: var(--color-primary);
+            font-size: 1.6rem;
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            text-align: center;
+        }
+
+        .seo-section p {
+            max-width: 900px;
+            margin: 0 auto 1rem auto;
+            text-align: justify;
+        }
+
+        .seo-section strong {
+            color: var(--color-text);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: calc(2 * var(--spacing-unit)) auto;
+                padding: 0 var(--spacing-unit);
+            }
+
+            .tool-section, .info-section {
+                flex: auto;
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://generateur-de-descriptions-de-produits-pour-ven-cce87ef2.onrender.com">
+    <meta property="og:title" content="Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)">
+    <meta property="og:description" content="Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.">
+    <meta property="og:url" content="https://generateur-de-descriptions-de-produits-pour-ven-cce87ef2.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)", "description": "Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.", "url": "https://generateur-de-descriptions-de-produits-pour-ven-cce87ef2.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="generateur-de-descriptions-de-produits-pour-ven-cce87ef2" data-runtime-mode="text_generator">
+    <header>
+        <h1>Démarquez Vos Créations : Le Générateur de Descriptions Ultime</h1>
+        <p>Créez des descriptions de produits irrésistibles et optimisées pour le SEO, parfaitement adaptées à votre boutique Etsy, votre e-commerce indépendant ou toute plateforme de vente en ligne. Attirez plus de clients et transformez l'intérêt en vente !</p>
+    </header>
+
+    <div class="container">
+        <section class="tool-section">
+            <h2>Générez vos Descriptions Persuasives</h2>
+            <form id="tool-form">
+                <label for="product-name">Nom du Produit ou de la Création:</label>
+                <input type="text" id="product-name" placeholder="Ex: Bracelet 'Aube Mystique' en Argent 925" required>
+
+                <label for="product-keywords">Mots-clés principaux (séparés par des virgules) :</label>
+                <input type="text" id="product-keywords" placeholder="Ex: bracelet argent, bijou fait main, cadeau femme">
+
+                <label for="product-features">Caractéristiques clés ou matériaux :</label>
+                <textarea id="product-features" placeholder="Ex: Argent massif 925, pierre de lune naturelle, réglable, fait à la main avec amour"></textarea>
+
+                <label for="target-audience">Qui est votre client idéal ? (Aide à affiner le ton) :</label>
+                <input type="text" id="target-audience" placeholder="Ex: Femmes soucieuses de l'élégance, amateurs de bijoux uniques">
+
+                <label for="tone-of-voice">Tonalité souhaitée :</label>
+                <select id="tone-of-voice">
+                    <option value="persuasif">Persuasif & Enthousiaste</option>
+                    <option value="professionnel">Professionnel & Informel</option>
+                    <option value="luxueux">Luxueux & Sophistiqué</option>
+                    <option value="créatif">Créatif & Artistique</option>
+                    <option value="amical">Amica & Chaleureux</option>
+                </select>
+
+                <button type="submit" id="tool-submit">Générer les Descriptions</button>
+            </form>
+
+            <div id="tool-result">
+                <h3 id="result-headline">Vos Titres et Descriptions Suggérés :</h3>
+                <p>Vos descriptions apparaitront ici, classées par style pour vous aider à choisir la meilleure approche.</p>
+            </div>
+        </section>
+
+        <aside class="info-section">
+            <h2>Pourquoi des Descriptions Optimisées ?</h2>
+            <p>Une description de produit bien rédigée est votre meilleur vendeur silencieux. Elle ne se contente pas d'informer, elle doit séduire, rassurer et inciter à l'achat.</p>
+            <ul>
+                <li><strong>Visibilité accrue :</strong> Un bon SEO attire les acheteurs via les moteurs de recherche et les plateformes.</li>
+                <li><strong>Confiance renforcée :</strong> Des détails clairs et un ton juste éliminent les doutes.</li>
+                <li><strong>Différenciation :</strong> Mettez en lumière ce qui rend votre création unique.</li>
+                <li><strong>Taux de conversion :</strong> Une description convaincante transforme les visiteurs en clients fidèles.</li>
+                <li><strong>Moins de retours :</strong> Des attentes claires réduisent les déceptions.</li>
+            </ul>
+            <p data-affiliate-slot="guide-persuasion">Explorez nos guides pour maîtriser l'art du copywriting.</p>
+        </aside>
+    </div>
+
+    <section class="seo-section">
+        <h3>Optimisez Votre Présence en Ligne avec des Descriptions Captivantes</h3>
+        <p>Dans l'univers concurrentiel des plateformes comme <strong>Etsy</strong>, un <strong>générateur de descriptions de produits</strong> est un atout indispensable pour tout <strong>vendeur en ligne</strong> ou <strong>artisan créateur</strong>. Notre outil est conçu pour vous aider à rédiger des <strong>textes de vente persuasifs</strong> qui non seulement mettent en valeur la qualité et l'unicité de vos <strong>produits faits main</strong> ou de vos <strong>créations uniques</strong>, mais sont également hautement <strong>optimisés pour le SEO</strong> (Search Engine Optimization). Que vous vendiez des <strong>bijoux artisanaux</strong>, des <strong>décorations maison</strong>, des <strong>vêtements vintage</strong> ou tout autre article, des <strong>mots-clés pertinents</strong> et une <strong>structure de description efficace</strong> sont essentiels pour être trouvé par vos clients idéaux en France.</p>
+        <p>Grâce à notre <strong>générateur de copywriting</strong>, vous pouvez facilement créer des <strong>descriptions de produits Etsy</strong> qui captivent l'attention et incitent à l'achat. Finis les blocs de texte génériques ! Nous vous aidons à formuler des <strong>titres accrocheurs</strong> et des <strong>descriptions détaillées</strong> qui racontent l'histoire de votre produit, ses avantages et ses caractéristiques uniques, en intégrant des <strong>mots-clés longue traîne</strong> pour une meilleure visibilité sur Google et dans les recherches internes des marketplaces. Obtenez des <strong>idées de description de produit</strong> et des <strong>phrases d'accroche pour vente</strong> en quelques clics, adaptées au ton de votre marque. Un <strong>outil SEO pour e-commerce</strong> comme le nôtre est votre partenaire pour <strong>augmenter vos ventes en ligne</strong> et <strong>améliorer votre référencement naturel</strong>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Votre Créateur Numérique. Tous droits réservés.</p>
+        <p>Des outils pour les artisans et entrepreneurs du web.</p>
+    </footer>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const productName = document.getElementById('product-name').value.trim();
+            const productKeywords = document.getElementById('product-keywords').value.split(',').map(kw => kw.trim()).filter(kw => kw.length > 0);
+            const productFeatures = document.getElementById('product-features').value.trim();
+            const targetAudience = document.getElementById('target-audience').value.trim();
+            const toneOfVoice = document.getElementById('tone-of-voice').value;
+
+            if (!productName) {
+                alert('Veuillez entrer le nom du produit.');
+                return;
+            }
+
+            const resultDiv = document.getElementById('tool-result');
+            resultDiv.innerHTML = '<h3>Vos Titres et Descriptions Suggérés :</h3>';
+
+            const generateHeadline = (style, name, keywords, audience, tone) => {
+                const baseKeywords = keywords.length > 0 ? keywords.slice(0, 2).join(', ') : 'produit unique';
+                const mainKeyword = keywords.length > 0 ? keywords[0] : 'votre article';
+                const audienceHint = audience ? `pour ${audience}` : '';
+
+                switch (style) {
+                    case 'seo':
+                        return `${name} : ${mainKeyword} ${audienceHint} - Fait Main & Personnalisable`;
+                    case 'clickbait':
+                        return `🚨 Ne Manquez Pas ${name} ! La Pièce qui va Transformer Votre Style ! 🚨`;
+                    case 'expert':
+                        return `${name} : Artisanat d'Exception & Matériaux Nobles - La Signature de l'Élégance`;
+                    case 'soft':
+                        return `Découvrez ${name} : Une Douceur Unique pour Votre Quotidien`;
+                    case 'commercial':
+                        return `Offre Spéciale : ${name} - Le Cadeau Idéal pour Toutes les Occasions !`;
+                    default:
+                        return name;
+                }
+            };
+
+            const generateDescriptionParagraph = (style, name, keywords, features, audience, tone) => {
+                const combinedKeywords = keywords.length > 0 ? 'Mots-clés : ' + keywords.join(', ') + '.' : '';
+                const baseDescription = `Découvrez notre magnifique "${name}", une création unique pensée pour vous.`;
+                const featureList = features ? features.split('\n').map(f => `- ${f.trim()}`).join('\n') : '';
+                const audienceSentence = audience ? `Parfait pour ${audience}.` : '';
+
+                switch (style) {
+                    case 'seo':
+                        return `${baseDescription} Ce ${name} est le choix idéal pour quiconque recherche un ${keywords[0] || 'produit exceptionnel'}. Fait à la main avec passion, il intègre des caractéristiques comme : ${features || 'des matériaux de qualité supérieure et une conception soignée'}. ${audienceSentence} Pour un achat responsable et un style affirmé. ${combinedKeywords}`;
+                    case 'clickbait':
+                        return `💥 Attention, stock limité ! Notre "${name}" est la pièce dont tout le monde parle. Ses caractéristiques uniques (${features || 'qualité inégalée, design audacieux'}) en font un incontournable. Achetez maintenant avant qu'il ne soit trop tard et rejoignez le cercle des privilégiés !`;
+                    case 'expert':
+                        return `Conçu avec une maîtrise artisanale, le "${name}" incarne l'excellence. Chaque détail reflète un savoir-faire méticuleux, utilisant des matériaux de première qualité. Ses attributs incluent : ${features || 'une durabilité exceptionnelle et une esthétique raffinée'}. Un investissement dans l'art et l'élégance intemporelle.`;
+                    case 'soft':
+                        return `Laissez-vous charmer par la douceur et l'authenticité de notre "${name}". Un article pensé pour apporter confort et beauté à votre quotidien. Ses atouts : ${features || 'une conception délicate, des finitions parfaites'}. Une invitation à la sérénité et au bien-être. ${audienceSentence}`;
+                    case 'commercial':
+                        return `Optimisez votre achat avec le "${name}" ! Un excellent rapport qualité-prix pour cette pièce versatile. Bénéficiez de : ${features || 'une grande adaptabilité, une facilité d\'utilisation'}. Idéal pour un cadeau ou pour vous faire plaisir. Profitez de nos offres exceptionnelles !`;
+                    default:
+                        return `${baseDescription} ${features ? `Ses caractéristiques incluent : ${features}.` : ''} ${audienceSentence}`;
+                }
+            };
+
+            const styles = [
+                { id: 'seo', name: 'SEO & Optimisé' },
+                { id: 'clickbait', name: 'Impactant & Viral' },
+                { id: 'expert', name: 'Qualité & Savoir-faire' },
+                { id: 'soft', name: 'Émotionnel & Doux' },
+                { id: 'commercial', name: 'Promotionnel & Vendeur' }
+            ];
+
+            styles.forEach(style => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'result-group';
+                resultDiv.appendChild(groupDiv);
+
+                const groupTitle = document.createElement('h4');
+                groupTitle.textContent = `Style : ${style.name}`;
+                groupDiv.appendChild(groupTitle);
+
+                const ul = document.createElement('ul');
+                groupDiv.appendChild(ul);
+
+                const headline = generateHeadline(style.id, productName, productKeywords, targetAudience, toneOfVoice);
+                const description = generateDescriptionParagraph(style.id, productName, productKeywords, productFeatures, targetAudience, toneOfVoice);
+
+                const liHeadline = document.createElement('li');
+                liHeadline.textContent = `Titre : ${headline}`;
+                ul.appendChild(liHeadline);
+
+                const liDescription = document.createElement('li');
+                liDescription.textContent = `Description : ${description}`;
+                ul.appendChild(liDescription);
+            });
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
