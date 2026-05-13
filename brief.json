@@ -1,0 +1,286 @@
+{
+  "run_id": "run-1778632154107",
+  "job_index": 4,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 5,
+    "archetype": "generator",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Un outil pour rédiger des textes persuasifs qui augmentent les conversions, en suggérant des mots-clés pertin…",
+    "notes": "Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.\nS'adresse aux créateurs et vendeurs sur des plateformes comme Etsy ou des boutiques en ligne propres. L'accent est sur le copywriting et la conversion.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "mixed batch",
+    "archetype_mix": [
+      "generator",
+      "calculator",
+      "tool"
+    ],
+    "forced_design_theme": "refined-grit",
+    "forced_structure_preset": "editorial-rail",
+    "site_idea_title": "Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)",
+    "site_idea_summary": "Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants."
+  },
+  "site_spec": {
+    "slug": "generateur-de-descriptions-de-produits-pour-ven-cce87ef2",
+    "theme": {
+      "name": "Refined Grit",
+      "slug": "refined-grit",
+      "eyebrow": "Polished Edge",
+      "family": "refined-grit",
+      "moods": [
+        "edgy",
+        "polished",
+        "textured",
+        "bold"
+      ],
+      "archetypes": [
+        "tool",
+        "generator",
+        "calculator"
+      ],
+      "niches": [
+        "brand tools",
+        "creator tools",
+        "portfolio utility",
+        "campaign tools",
+        "research"
+      ],
+      "keywords": [
+        "grit",
+        "texture",
+        "edge",
+        "bold",
+        "statement"
+      ],
+      "token_index": [
+        "bold",
+        "brand",
+        "calculator",
+        "campaign",
+        "creator",
+        "edge",
+        "edgy",
+        "generator",
+        "grit",
+        "polished",
+        "portfolio",
+        "refined",
+        "research",
+        "statement",
+        "texture",
+        "textured",
+        "tool",
+        "tools",
+        "utility"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap",
+      "display_font": "\"DM Serif Display\", serif",
+      "body_font": "\"Inter\", sans-serif",
+      "layout": "editorial",
+      "card_style": "paper",
+      "button_style": "slab",
+      "decor_style": "paper",
+      "hero_template": "1fr",
+      "seo_template": "1fr",
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "hero_min_height": "70vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "16px",
+      "palette": {
+        "bg": "linear-gradient(160deg, #f7f3ee 0%, #d6d3d1 48%, #111827 100%)",
+        "surface": "rgba(17,24,39,0.8)",
+        "surface_border": "rgba(249,115,22,0.14)",
+        "text": "#faf5ef",
+        "muted": "#d6c6b9",
+        "accent": "#f97316",
+        "accent_alt": "#eab308",
+        "hero_glow": "rgba(249, 115, 22, 0.16)",
+        "button_text": "#1c1008",
+        "panel_alt": "rgba(255,255,255,0.04)",
+        "shadow": "0 28px 84px rgba(15, 23, 42, 0.3)",
+        "input_fill": "rgba(255,255,255,0.05)"
+      }
+    },
+    "structure": {
+      "name": "Editorial Rail",
+      "slug": "editorial-rail",
+      "hero_variant": "editorial",
+      "proof_variant": "rail",
+      "section_order": [
+        "seo",
+        "features",
+        "proof",
+        "faq"
+      ],
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "family": "editorial",
+      "moods": [
+        "calm",
+        "trust",
+        "luxury"
+      ],
+      "archetypes": [
+        "calculator",
+        "generator",
+        "tool"
+      ],
+      "niches": [
+        "property",
+        "documents",
+        "consulting",
+        "insurance"
+      ],
+      "keywords": [
+        "editorial",
+        "rail",
+        "storytelling",
+        "magazine"
+      ],
+      "token_index": [
+        "calculator",
+        "calm",
+        "consulting",
+        "documents",
+        "editorial",
+        "faq",
+        "features",
+        "generator",
+        "insurance",
+        "luxury",
+        "magazine",
+        "proof",
+        "property",
+        "rail",
+        "seo",
+        "storytelling",
+        "tool",
+        "trust"
+      ]
+    },
+    "render_direction": "campaign-slab",
+    "render_direction_name": "Campaign Slab",
+    "page_blueprint": "magazine-fold",
+    "page_blueprint_name": "Magazine Fold",
+    "title": "Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)",
+    "tagline": "Générez vos Descriptions Persuasives",
+    "description": "Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.",
+    "feature_prefix": "Bloc",
+    "action": "Utiliser l'outil",
+    "cta_primary": "Générer les Descriptions",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "website_url",
+        "label": "URL à auditer",
+        "type": "text",
+        "placeholder": "https://exemple.fr/offre-eco",
+        "weight": 1.0
+      },
+      {
+        "id": "page_title",
+        "label": "Balise title actuelle",
+        "type": "text",
+        "placeholder": "Comparateur assurance auto jeune conducteur",
+        "weight": 1.0
+      },
+      {
+        "id": "focus_keyword",
+        "label": "Mot-clé principal",
+        "type": "text",
+        "placeholder": "assurance auto jeune conducteur",
+        "weight": 1.0
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Campaign Slab",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Résultat recommandé",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Campaign Slab",
+      "Générer les Descriptions",
+      "Résultat recommandé",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Résultat recommandé",
+    "result_unit": "",
+    "runtime_mode": "text_generator",
+    "page_variant": "showcase",
+    "faq_topic": "Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants) ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants) et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants) | Générez vos Descriptions Persuasives</title>\n    <meta name=\"description\" content=\"Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.\">\n    <style>\n        :root {\n            --color-primary: #1a1a1a;\n            --color-secondary: #f0f0f0;\n            --color-accent: #b80d6f;\n            --color-text: #333;\n            --color-light-text: #666;\n            --color-border: #ddd;\n            --font-family-sans: 'Helvetica Neue', Arial, sans-serif;\n            --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;\n            --spacing-unit: 1rem;\n        }\n\n        body {\n            font-family: var(--font-family-sans);\n            color: var(--color-text);\n            margin: 0;\n            padding: 0;\n            background: linear-gradient(135deg, var(--color-secondary) 0%, #ffffff 100%);\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--color-primary);\n            color: var(--color-secondary);\n            padding: calc(2 * var(--spacing-unit)) var(--spacing-unit);\n            text-align: center;\n            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n            position: relative;\n            z-index: 10;\n        }\n\n        header h1 {\n            margin: 0;\n            font-size: 2.5rem;\n            letter-spacing: -0.05em;\n            font-weight: 700;\n        }\n\n        header p {\n            font-size: 1.2rem;\n            margin-top: 0.5rem;\n            max-width: 800px;\n            margin-left: auto;\n            margin-right: auto;\n            opacity: 0.9;\n        }\n\n        .container {\n            max-width: 1200px;\n            margin: calc(3 * var(--spacing-unit)) auto;\n            padding: 0 calc(1.5 * var(--spacing-unit));\n            display: flex;\n            flex-wrap: wrap;\n            gap: calc(2 * var(--spacing-unit));\n            flex-grow: 1;\n        }\n\n        .tool-section, .info-section {\n            background-color: #fff;\n            padding: calc(2 * var(--spacing-unit));\n            border-radius: 8px;\n            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);\n            border: 1px solid var(--color-border);\n            display: flex;\n            flex-direction: column;\n        }\n\n        .tool-section {\n            flex: 2 1 600px;\n            min-width: 50%;\n            position: relative;\n        }\n\n        .info-section {\n            flex: 1 1 300px;\n            min-width: 30%;\n            background: var(--color-secondary);\n            border-color: #d0d0d0;\n        }\n\n        h2 {\n            color: var(--color-primary);\n            font-size: 1.8rem;\n            margin-top: 0;\n            margin-bottom: calc(1.5 * var(--spacing-unit));\n            border-bottom: 2px solid var(--color-accent);\n            padding-bottom: 0.5rem;\n        }\n\n        label {\n            display: block;\n            margin-bottom: 0.5rem;\n            font-weight: 600;\n            color: var(--color-light-text);\n            font-size: 0.95rem;\n        }\n\n        input[type=\"text\"],\n        textarea,\n        select {\n            width: 100%;\n            padding: 0.8rem;\n            margin-bottom: calc(1.5 * var(--spacing-unit));\n            border: 1px solid var(--color-border);\n            border-radius: 4px;\n            font-size: 1rem;\n            font-family: var(--font-family-sans);\n            box-sizing: border-box;\n            background-color: #fcfcfc;\n            transition: border-color 0.2s ease-in-out;\n        }\n\n        input[type=\"text\"]:focus,\n        textarea:focus,\n        select:focus {\n            border-color: var(--color-accent);\n            outline: none;\n            box-shadow: 0 0 0 2px rgba(184, 13, 111, 0.1);\n        }\n\n        textarea {\n            min-height: 120px;\n            resize: vertical;\n        }\n\n        button {\n            background-color: var(--color-accent);\n            color: #fff;\n            padding: 1rem 2rem;\n            border: none;\n            border-radius: 4px;\n            font-size: 1.1rem;\n            font-weight: 700;\n            cursor: pointer;\n            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;\n            box-shadow: 0 4px 12px rgba(184, 13, 111, 0.3);\n            width: fit-content;\n            margin-top: 1rem;\n        }\n\n        button:hover {\n            background-color: #a00c60;\n            transform: translateY(-2px);\n        }\n\n        button:active {\n            transform: translateY(0);\n            box-shadow: 0 2px 8px rgba(184, 13, 111, 0.2);\n        }\n\n        #tool-result {\n            margin-top: calc(2 * var(--spacing-unit));\n            padding-top: calc(1.5 * var(--spacing-unit));\n            border-top: 1px dashed var(--color-border);\n            font-size: 0.95rem;\n        }\n\n        #tool-result h3 {\n            color: var(--color-accent);\n            margin-top: 0;\n            margin-bottom: 1rem;\n            font-size: 1.4rem;\n        }\n\n        .result-group {\n            margin-bottom: calc(1.5 * var(--spacing-unit));\n            padding: 1rem;\n            background-color: #f9f9f9;\n            border-radius: 6px;\n            border: 1px solid #eee;\n        }\n\n        .result-group h4 {\n            color: var(--color-primary);\n            margin-top: 0;\n            margin-bottom: 0.8rem;\n            font-size: 1.1rem;\n            padding-bottom: 0.5rem;\n            border-bottom: 1px solid var(--color-border);\n        }\n\n        .result-group ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        .result-group li {\n            background-color: #fff;\n            padding: 0.7rem 1rem;\n            margin-bottom: 0.5rem;\n            border-radius: 4px;\n            border: 1px solid #f0f0f0;\n            font-family: var(--font-family-mono);\n            font-size: 0.9rem;\n            color: var(--color-text);\n            box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n            word-break: break-word;\n        }\n\n        .info-section ul {\n            list-style: none;\n            padding: 0;\n            margin: 0;\n        }\n\n        .info-section li {\n            margin-bottom: 0.8rem;\n            padding-left: 1.5rem;\n            position: relative;\n            font-size: 0.9rem;\n            color: var(--color-light-text);\n        }\n\n        .info-section li::before {\n            content: '✓';\n            color: var(--color-accent);\n            position: absolute;\n            left: 0;\n            font-weight: bold;\n        }\n\n        footer {\n            background-color: var(--color-primary);\n            color: var(--color-secondary);\n            text-align: center;\n            padding: calc(3 * var(--spacing-unit)) var(--spacing-unit);\n            margin-top: calc(4 * var(--spacing-unit));\n            font-size: 0.9rem;\n        }\n\n        footer a {\n            color: var(--color-accent);\n            text-decoration: none;\n            transition: color 0.2s ease-in-out;\n        }\n\n        footer a:hover {\n            color: #fff;\n        }\n\n        .seo-section {\n            background-color: #fdfdfd;\n            padding: calc(3 * var(--spacing-unit)) calc(1.5 * var(--spacing-unit));\n            margin-top: calc(4 * var(--spacing-unit));\n            border-top: 1px solid var(--color-border);\n            color: var(--color-light-text);\n        }\n\n        .seo-section h3 {\n            color: var(--color-primary);\n            font-size: 1.6rem;\n            margin-bottom: calc(1.5 * var(--spacing-unit));\n            text-align: center;\n        }\n\n        .seo-section p {\n            max-width: 900px;\n            margin: 0 auto 1rem auto;\n            text-align: justify;\n        }\n\n        .seo-section strong {\n            color: var(--color-text);\n        }\n\n        @media (max-width: 768px) {\n            .container {\n                flex-direction: column;\n                margin: calc(2 * var(--spacing-unit)) auto;\n                padding: 0 var(--spacing-unit);\n            }\n\n            .tool-section, .info-section {\n                flex: auto;\n                width: 100%;\n            }\n\n            header h1 {\n                font-size: 2rem;\n            }\n\n            header p {\n                font-size: 1rem;\n            }\n\n            button {\n                width: 100%;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://generateur-de-descriptions-de-produits-pour-ven-cce87ef2.onrender.com\">\n    <meta property=\"og:title\" content=\"Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)\">\n    <meta property=\"og:description\" content=\"Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.\">\n    <meta property=\"og:url\" content=\"https://generateur-de-descriptions-de-produits-pour-ven-cce87ef2.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Générateur de Descriptions de Produits pour Vendeurs en Ligne (Etsy/Indépendants)\", \"description\": \"Créez des descriptions de produits attrayantes et optimisées pour le SEO, adaptées aux plateformes de vente en ligne comme Etsy ou les sites indépendants.\", \"url\": \"https://generateur-de-descriptions-de-produits-pour-ven-cce87ef2.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"generateur-de-descriptions-de-produits-pour-ven-cce87ef2\" data-runtime-mode=\"text_generator\">\n    <header>\n        <h1>Démarquez Vos Créations : Le Générateur de Descriptions Ultime</h1>\n        <p>Créez des descriptions de produits irrésistibles et optimisées pour le SEO, parfaitement adaptées à votre boutique Etsy, votre e-commerce indépendant ou toute plateforme de vente en ligne. Attirez plus de clients et transformez l'intérêt en vente !</p>\n    </header>\n\n    <div class=\"container\">\n        <section class=\"tool-section\">\n            <h2>Générez vos Descriptions Persuasives</h2>\n            <form id=\"tool-form\">\n                <label for=\"product-name\">Nom du Produit ou de la Création:</label>\n                <input type=\"text\" id=\"product-name\" placeholder=\"Ex: Bracelet 'Aube Mystique' en Argent 925\" required>\n\n                <label for=\"product-keywords\">Mots-clés principaux (séparés par des virgules) :</label>\n                <input type=\"text\" id=\"product-keywords\" placeholder=\"Ex: bracelet argent, bijou fait main, cadeau femme\">\n\n                <label for=\"product-features\">Caractéristiques clés ou matériaux :</label>\n                <textarea id=\"product-features\" placeholder=\"Ex: Argent massif 925, pierre de lune naturelle, réglable, fait à la main avec amour\"></textarea>\n\n                <label for=\"target-audience\">Qui est votre client idéal ? (Aide à affiner le ton) :</label>\n                <input type=\"text\" id=\"target-audience\" placeholder=\"Ex: Femmes soucieuses de l'élégance, amateurs de bijoux uniques\">\n\n                <label for=\"tone-of-voice\">Tonalité souhaitée :</label>\n                <select id=\"tone-of-voice\">\n                    <option value=\"persuasif\">Persuasif & Enthousiaste</option>\n                    <option value=\"professionnel\">Professionnel & Informel</option>\n                    <option value=\"luxueux\">Luxueux & Sophistiqué</option>\n                    <option value=\"créatif\">Créatif & Artistique</option>\n                    <option value=\"amical\">Amica & Chaleureux</option>\n                </select>\n\n                <button type=\"submit\" id=\"tool-submit\">Générer les Descriptions</button>\n            </form>\n\n            <div id=\"tool-result\">\n                <h3 id=\"result-headline\">Vos Titres et Descriptions Suggérés :</h3>\n                <p>Vos descriptions apparaitront ici, classées par style pour vous aider à choisir la meilleure approche.</p>\n            </div>\n        </section>\n\n        <aside class=\"info-section\">\n            <h2>Pourquoi des Descriptions Optimisées ?</h2>\n            <p>Une description de produit bien rédigée est votre meilleur vendeur silencieux. Elle ne se contente pas d'informer, elle doit séduire, rassurer et inciter à l'achat.</p>\n            <ul>\n                <li><strong>Visibilité accrue :</strong> Un bon SEO attire les acheteurs via les moteurs de recherche et les plateformes.</li>\n                <li><strong>Confiance renforcée :</strong> Des détails clairs et un ton juste éliminent les doutes.</li>\n                <li><strong>Différenciation :</strong> Mettez en lumière ce qui rend votre création unique.</li>\n                <li><strong>Taux de conversion :</strong> Une description convaincante transforme les visiteurs en clients fidèles.</li>\n                <li><strong>Moins de retours :</strong> Des attentes claires réduisent les déceptions.</li>\n            </ul>\n            <p data-affiliate-slot=\"guide-persuasion\">Explorez nos guides pour maîtriser l'art du copywriting.</p>\n        </aside>\n    </div>\n\n    <section class=\"seo-section\">\n        <h3>Optimisez Votre Présence en Ligne avec des Descriptions Captivantes</h3>\n        <p>Dans l'univers concurrentiel des plateformes comme <strong>Etsy</strong>, un <strong>générateur de descriptions de produits</strong> est un atout indispensable pour tout <strong>vendeur en ligne</strong> ou <strong>artisan créateur</strong>. Notre outil est conçu pour vous aider à rédiger des <strong>textes de vente persuasifs</strong> qui non seulement mettent en valeur la qualité et l'unicité de vos <strong>produits faits main</strong> ou de vos <strong>créations uniques</strong>, mais sont également hautement <strong>optimisés pour le SEO</strong> (Search Engine Optimization). Que vous vendiez des <strong>bijoux artisanaux</strong>, des <strong>décorations maison</strong>, des <strong>vêtements vintage</strong> ou tout autre article, des <strong>mots-clés pertinents</strong> et une <strong>structure de description efficace</strong> sont essentiels pour être trouvé par vos clients idéaux en France.</p>\n        <p>Grâce à notre <strong>générateur de copywriting</strong>, vous pouvez facilement créer des <strong>descriptions de produits Etsy</strong> qui captivent l'attention et incitent à l'achat. Finis les blocs de texte génériques ! Nous vous aidons à formuler des <strong>titres accrocheurs</strong> et des <strong>descriptions détaillées</strong> qui racontent l'histoire de votre produit, ses avantages et ses caractéristiques uniques, en intégrant des <strong>mots-clés longue traîne</strong> pour une meilleure visibilité sur Google et dans les recherches internes des marketplaces. Obtenez des <strong>idées de description de produit</strong> et des <strong>phrases d'accroche pour vente</strong> en quelques clics, adaptées au ton de votre marque. Un <strong>outil SEO pour e-commerce</strong> comme le nôtre est votre partenaire pour <strong>augmenter vos ventes en ligne</strong> et <strong>améliorer votre référencement naturel</strong>.</p>\n    </section>\n\n    <footer>\n        <p>&copy; 2023 Votre Créateur Numérique. Tous droits réservés.</p>\n        <p>Des outils pour les artisans et entrepreneurs du web.</p>\n    </footer>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n\n            const productName = document.getElementById('product-name').value.trim();\n            const productKeywords = document.getElementById('product-keywords').value.split(',').map(kw => kw.trim()).filter(kw => kw.length > 0);\n            const productFeatures = document.getElementById('product-features').value.trim();\n            const targetAudience = document.getElementById('target-audience').value.trim();\n            const toneOfVoice = document.getElementById('tone-of-voice').value;\n\n            if (!productName) {\n                alert('Veuillez entrer le nom du produit.');\n                return;\n            }\n\n            const resultDiv = document.getElementById('tool-result');\n            resultDiv.innerHTML = '<h3>Vos Titres et Descriptions Suggérés :</h3>';\n\n            const generateHeadline = (style, name, keywords, audience, tone) => {\n                const baseKeywords = keywords.length > 0 ? keywords.slice(0, 2).join(', ') : 'produit unique';\n                const mainKeyword = keywords.length > 0 ? keywords[0] : 'votre article';\n                const audienceHint = audience ? `pour ${audience}` : '';\n\n                switch (style) {\n                    case 'seo':\n                        return `${name} : ${mainKeyword} ${audienceHint} - Fait Main & Personnalisable`;\n                    case 'clickbait':\n                        return `🚨 Ne Manquez Pas ${name} ! La Pièce qui va Transformer Votre Style ! 🚨`;\n                    case 'expert':\n                        return `${name} : Artisanat d'Exception & Matériaux Nobles - La Signature de l'Élégance`;\n                    case 'soft':\n                        return `Découvrez ${name} : Une Douceur Unique pour Votre Quotidien`;\n                    case 'commercial':\n                        return `Offre Spéciale : ${name} - Le Cadeau Idéal pour Toutes les Occasions !`;\n                    default:\n                        return name;\n                }\n            };\n\n            const generateDescriptionParagraph = (style, name, keywords, features, audience, tone) => {\n                const combinedKeywords = keywords.length > 0 ? 'Mots-clés : ' + keywords.join(', ') + '.' : '';\n                const baseDescription = `Découvrez notre magnifique \"${name}\", une création unique pensée pour vous.`;\n                const featureList = features ? features.split('\\n').map(f => `- ${f.trim()}`).join('\\n') : '';\n                const audienceSentence = audience ? `Parfait pour ${audience}.` : '';\n\n                switch (style) {\n                    case 'seo':\n                        return `${baseDescription} Ce ${name} est le choix idéal pour quiconque recherche un ${keywords[0] || 'produit exceptionnel'}. Fait à la main avec passion, il intègre des caractéristiques comme : ${features || 'des matériaux de qualité supérieure et une conception soignée'}. ${audienceSentence} Pour un achat responsable et un style affirmé. ${combinedKeywords}`;\n                    case 'clickbait':\n                        return `💥 Attention, stock limité ! Notre \"${name}\" est la pièce dont tout le monde parle. Ses caractéristiques uniques (${features || 'qualité inégalée, design audacieux'}) en font un incontournable. Achetez maintenant avant qu'il ne soit trop tard et rejoignez le cercle des privilégiés !`;\n                    case 'expert':\n                        return `Conçu avec une maîtrise artisanale, le \"${name}\" incarne l'excellence. Chaque détail reflète un savoir-faire méticuleux, utilisant des matériaux de première qualité. Ses attributs incluent : ${features || 'une durabilité exceptionnelle et une esthétique raffinée'}. Un investissement dans l'art et l'élégance intemporelle.`;\n                    case 'soft':\n                        return `Laissez-vous charmer par la douceur et l'authenticité de notre \"${name}\". Un article pensé pour apporter confort et beauté à votre quotidien. Ses atouts : ${features || 'une conception délicate, des finitions parfaites'}. Une invitation à la sérénité et au bien-être. ${audienceSentence}`;\n                    case 'commercial':\n                        return `Optimisez votre achat avec le \"${name}\" ! Un excellent rapport qualité-prix pour cette pièce versatile. Bénéficiez de : ${features || 'une grande adaptabilité, une facilité d\\'utilisation'}. Idéal pour un cadeau ou pour vous faire plaisir. Profitez de nos offres exceptionnelles !`;\n                    default:\n                        return `${baseDescription} ${features ? `Ses caractéristiques incluent : ${features}.` : ''} ${audienceSentence}`;\n                }\n            };\n\n            const styles = [\n                { id: 'seo', name: 'SEO & Optimisé' },\n                { id: 'clickbait', name: 'Impactant & Viral' },\n                { id: 'expert', name: 'Qualité & Savoir-faire' },\n                { id: 'soft', name: 'Émotionnel & Doux' },\n                { id: 'commercial', name: 'Promotionnel & Vendeur' }\n            ];\n\n            styles.forEach(style => {\n                const groupDiv = document.createElement('div');\n                groupDiv.className = 'result-group';\n                resultDiv.appendChild(groupDiv);\n\n                const groupTitle = document.createElement('h4');\n                groupTitle.textContent = `Style : ${style.name}`;\n                groupDiv.appendChild(groupTitle);\n\n                const ul = document.createElement('ul');\n                groupDiv.appendChild(ul);\n\n                const headline = generateHeadline(style.id, productName, productKeywords, targetAudience, toneOfVoice);\n                const description = generateDescriptionParagraph(style.id, productName, productKeywords, productFeatures, targetAudience, toneOfVoice);\n\n                const liHeadline = document.createElement('li');\n                liHeadline.textContent = `Titre : ${headline}`;\n                ul.appendChild(liHeadline);\n\n                const liDescription = document.createElement('li');\n                liDescription.textContent = `Description : ${description}`;\n                ul.appendChild(liDescription);\n            });\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
